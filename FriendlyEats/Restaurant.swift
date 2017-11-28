@@ -24,7 +24,8 @@ struct Restaurant {
   var price: Int // from 1-3; could also be an enum
   var ratingCount: Int // numRatings
   var averageRating: Float
-
+  var url: String
+    
   var dictionary: [String: Any] {
     return [
       "name": name,
@@ -33,6 +34,7 @@ struct Restaurant {
       "price": price,
       "numRatings": ratingCount,
       "avgRating": averageRating,
+      "url" : url,
     ]
   }
 
@@ -54,19 +56,24 @@ extension Restaurant: DocumentSerializable {
   ]
 
   init?(dictionary: [String : Any]) {
+    
+    print(dictionary);
     guard let name = dictionary["name"] as? String,
         let category = dictionary["category"] as? String,
         let city = dictionary["city"] as? String,
         let price = dictionary["price"] as? Int,
         let ratingCount = dictionary["numRatings"] as? Int,
         let averageRating = dictionary["avgRating"] as? Float else { return nil }
+        let url = dictionary["url"] as? String
 
     self.init(name: name,
               category: category,
               city: city,
               price: price,
               ratingCount: ratingCount,
-              averageRating: averageRating)
+              averageRating: averageRating,
+              url: url ?? ""
+    )
   }
 
 }
