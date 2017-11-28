@@ -9,8 +9,10 @@
 import Foundation
 import UIKit
 import Firebase
+import FirebaseStorage
 
-class NewResterauntViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
+class NewResterauntViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
     
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -30,11 +32,11 @@ class NewResterauntViewController: UIViewController, UIPickerViewDelegate, UIPic
         }
     }
     
+    var url: String = "";
+    
     // MARK: Functions
     override func viewDidLoad(){
-        
     }
-    
     
     @IBAction func didTapCancel(_ sender: Any) {
          navigationController?.popViewController(animated: true)
@@ -44,6 +46,23 @@ class NewResterauntViewController: UIViewController, UIPickerViewDelegate, UIPic
         return nameTextField.text != "" && categoryTextField.text != "" && cityTextField.text != "" && priceTextField.text != ""
     }
     
+    func uploadMedia(completion: @escaping (_ url: String?) -> Void) {
+        guard let name = nameTextField.text else {
+            return
+        }
+        let storageRef = Storage.storage().reference().child("\(name).png")
+        if let uploadData = UIImagePNGRepresentation(self.imageView.image!) {
+            storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
+                if error != nil {
+                    print("error")
+                    completion(nil)
+                } else {
+                    completion((metadata?.downloadURL()?.absoluteString)!)
+                }
+            }
+        }
+    }
+        
     // MARK: Private Views
     private lazy var pricePickerView: UIPickerView = {
         let pickerView = UIPickerView()
@@ -81,12 +100,61 @@ class NewResterauntViewController: UIViewController, UIPickerViewDelegate, UIPic
             city: cityTextField.text!,
             price: price(from: priceTextField.text!)!,
             ratingCount: 0,
-            averageRating: 0
+            averageRating: 0,
+            url: self.url
         )
         
         collection.addDocument(data: restaurant.dictionary)
         navigationController?.popViewController(animated: true)
         
+    }
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBAction func uploadImage(_ sender: Any) {
+        
+        guard let _ = nameTextField.text else {
+            let alertController = UIAlertController(title: "Add Resteraunt", message:
+                "Please add a name for your resteraunt first.", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Okay!", style: UIAlertActionStyle.default,handler: nil))
+            
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        
+        image.allowsEditing = false
+        
+        self.present(image, animated: true){}
+    }
+    
+    // MARK: PickerViewDelegate
+    @objc(imagePickerController:didFinishPickingMediaWithInfo:) func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
+    {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        {
+            
+            var indicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+            indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+            indicator.center = self.view.center
+            self.view.addSubview(indicator)
+            
+            indicator.startAnimating()
+            indicator.backgroundColor = UIColor.white
+            
+            imageView.image = image;
+            uploadMedia(completion: {
+                (url) in
+                print(url);
+                indicator.stopAnimating()
+                indicator.hidesWhenStopped = true
+                self.url = url!
+            })
+        }
+        self.dismiss(animated: true, completion: nil)
     }
     
     // MARK: UIPickerViewDataSource
