@@ -48,7 +48,8 @@ class RestaurantsTableViewController: UIViewController, UITableViewDataSource, U
   @IBOutlet var tableView: UITableView!
   @IBOutlet var activeFiltersStackView: UIStackView!
   @IBOutlet var stackViewHeightConstraint: NSLayoutConstraint!
-
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    
   @IBOutlet var cityFilterLabel: UILabel!
   @IBOutlet var categoryFilterLabel: UILabel!
   @IBOutlet var priceFilterLabel: UILabel!
@@ -73,8 +74,32 @@ class RestaurantsTableViewController: UIViewController, UITableViewDataSource, U
     guard let query = query else { return }
     stopObserving()
 
-    // Display data from Firestore, part one
+    listener = query.addSnapshotListener { [unowned self] (snapshot, error) in
+        guard let snapshot = snapshot else {
+            print("Error fetching snapshot results: \(error!)")
+            return
+        }
+        let models = snapshot.documents.map { (document) -> Restaurant in
+            if let model = Restaurant(dictionary: document.data()) {
+                return model
+            } else {
+                // Don't use fatalError here in a real app.
+                fatalError("Unable to initialize type \(Restaurant.self) with dictionary \(document.data())")
+            }
+        }
+        self.restaurants = models
+        self.documents = snapshot.documents
+        
+        if self.documents.count > 0 {
+            self.tableView.backgroundView = nil
+        } else {
+            self.tableView.backgroundView = self.backgroundView
+        }
+        
+        self.tableView.reloadData()
+    }
 
+    // Display data from Firestore, part one
 
   }
 
@@ -148,11 +173,19 @@ class RestaurantsTableViewController: UIViewController, UITableViewDataSource, U
       let category = categories[Int(arc4random_uniform(UInt32(categories.count)))]
       let city = cities[Int(arc4random_uniform(UInt32(cities.count)))]
       let price = Int(arc4random_uniform(3)) + 1
-
       // Basic writes
 
       let collection = Firestore.firestore().collection("restaurants")
+        let restaurant = Restaurant(
+            name: name,
+            category: category,
+            city: city,
+            price: price,
+            ratingCount: 0,
+            averageRating: 0
+        )
 
+        collection.addDocument(data: restaurant.dictionary)
 
     }
   }
@@ -202,6 +235,13 @@ class RestaurantsTableViewController: UIViewController, UITableViewDataSource, U
     self.navigationController?.pushViewController(controller, animated: true)
   }
 
+    // MARK: Actions
+    @IBAction func didTapAddRestauraunt(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "NewResterauntViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 extension RestaurantsTableViewController: FiltersViewControllerDelegate {
@@ -209,6 +249,7 @@ extension RestaurantsTableViewController: FiltersViewControllerDelegate {
   func query(withCategory category: String?, city: String?, price: Int?, sortBy: String?) -> Query {
     var filtered = baseQuery()
 
+    
     if category == nil && city == nil && price == nil && sortBy == nil {
       stackViewHeightConstraint.constant = 0
       activeFiltersStackView.isHidden = true
@@ -216,8 +257,24 @@ extension RestaurantsTableViewController: FiltersViewControllerDelegate {
       stackViewHeightConstraint.constant = 44
       activeFiltersStackView.isHidden = false
     }
-
     // Advanced queries
+    
+    if let category = category, !category.isEmpty {
+        filtered = filtered.whereField("category", isEqualTo: category)
+    }
+    
+    if let city = city, !city.isEmpty {
+        filtered = filtered.whereField("city", isEqualTo: city)
+    }
+    
+    if let price = price {
+        filtered = filtered.whereField("price", isEqualTo: price)
+    }
+    
+    if let sortBy = sortBy, !sortBy.isEmpty {
+        filtered = filtered.order(by: sortBy)
+    }
+
 
     return filtered
   }

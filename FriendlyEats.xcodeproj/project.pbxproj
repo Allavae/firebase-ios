@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DB1278CCF70D365CEA28470 /* Pods_FriendlyEatsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325899609D87164A15A40D6A /* Pods_FriendlyEatsTests.framework */; };
 		8D004D2D1EE879B5004DEF35 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D004D2C1EE879B5004DEF35 /* FiltersViewController.swift */; };
 		8D5DF7021F7EF3BA00B0D24F /* NewReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5DF7011F7EF3BA00B0D24F /* NewReviewViewController.swift */; };
 		8D9BBC311EE2200900194E9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9BBC301EE2200900194E9A /* AppDelegate.swift */; };
@@ -21,6 +22,9 @@
 		8DF1E3151EE72C4600192CDE /* LocalCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF1E3141EE72C4600192CDE /* LocalCollection.swift */; };
 		8DF77E1A1EEB45E500CB2330 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF77E191EEB45E500CB2330 /* RestaurantDetailViewController.swift */; };
 		8DF77E1C1EEB645100CB2330 /* StarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF77E1B1EEB645100CB2330 /* StarsView.swift */; };
+		D38ABF0CE1CD1C38886633AE /* Pods_FriendlyEats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C00C5E5FEEAA35CF290044 /* Pods_FriendlyEats.framework */; };
+		DABFECD41FCD8EA300CB2F6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DABFECD31FCD8EA300CB2F6C /* GoogleService-Info.plist */; };
+		DABFECD61FCDA5A900CB2F6C /* NewResterauntViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABFECD51FCDA5A900CB2F6C /* NewResterauntViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21C00C5E5FEEAA35CF290044 /* Pods_FriendlyEats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FriendlyEats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		325899609D87164A15A40D6A /* Pods_FriendlyEatsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FriendlyEatsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C2D4AD5CC04496C1F75CFB9 /* Pods-FriendlyEats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendlyEats.release.xcconfig"; path = "Pods/Target Support Files/Pods-FriendlyEats/Pods-FriendlyEats.release.xcconfig"; sourceTree = "<group>"; };
+		7D48627A5F7A2ABC3463A8C0 /* Pods-FriendlyEatsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendlyEatsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FriendlyEatsTests/Pods-FriendlyEatsTests.release.xcconfig"; sourceTree = "<group>"; };
 		8D004D2C1EE879B5004DEF35 /* FiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		8D5DF7011F7EF3BA00B0D24F /* NewReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewReviewViewController.swift; sourceTree = "<group>"; };
 		8D9BBC2D1EE2200900194E9A /* FriendlyEats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendlyEats.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +60,10 @@
 		8DF1E3141EE72C4600192CDE /* LocalCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalCollection.swift; sourceTree = "<group>"; };
 		8DF77E191EEB45E500CB2330 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		8DF77E1B1EEB645100CB2330 /* StarsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsView.swift; sourceTree = "<group>"; };
+		BB5EF37176673232E6577FAA /* Pods-FriendlyEatsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendlyEatsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendlyEatsTests/Pods-FriendlyEatsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DABFECD31FCD8EA300CB2F6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DABFECD51FCDA5A900CB2F6C /* NewResterauntViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewResterauntViewController.swift; sourceTree = "<group>"; };
+		FC1C1EE4D7AFD80EFD6CAF92 /* Pods-FriendlyEats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendlyEats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendlyEats/Pods-FriendlyEats.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D38ABF0CE1CD1C38886633AE /* Pods_FriendlyEats.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,18 +79,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB1278CCF70D365CEA28470 /* Pods_FriendlyEatsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C679341238474921E9D1215 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21C00C5E5FEEAA35CF290044 /* Pods_FriendlyEats.framework */,
+				325899609D87164A15A40D6A /* Pods_FriendlyEatsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89229E0A1F48DD6A23F070E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC1C1EE4D7AFD80EFD6CAF92 /* Pods-FriendlyEats.debug.xcconfig */,
+				4C2D4AD5CC04496C1F75CFB9 /* Pods-FriendlyEats.release.xcconfig */,
+				BB5EF37176673232E6577FAA /* Pods-FriendlyEatsTests.debug.xcconfig */,
+				7D48627A5F7A2ABC3463A8C0 /* Pods-FriendlyEatsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8D9BBC241EE2200800194E9A = {
 			isa = PBXGroup;
 			children = (
 				8D9BBC2F1EE2200900194E9A /* FriendlyEats */,
 				8D9BBC441EE2200900194E9A /* FriendlyEatsTests */,
 				8D9BBC2E1EE2200900194E9A /* Products */,
+				89229E0A1F48DD6A23F070E6 /* Pods */,
+				7C679341238474921E9D1215 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				8DF1E3101EE5CFBC00192CDE /* GoogleService-Info.plist */,
+				DABFECD31FCD8EA300CB2F6C /* GoogleService-Info.plist */,
 				8D9BBC301EE2200900194E9A /* AppDelegate.swift */,
 				8D9BBC321EE2200900194E9A /* RestaurantsTableViewController.swift */,
 				8DF77E191EEB45E500CB2330 /* RestaurantDetailViewController.swift */,
@@ -103,12 +140,12 @@
 				8DF1E3141EE72C4600192CDE /* LocalCollection.swift */,
 				8DF1E3121EE5CFF900192CDE /* Restaurant.swift */,
 				8D9BBC341EE2200900194E9A /* Main.storyboard */,
+				DABFECD51FCDA5A900CB2F6C /* NewResterauntViewController.swift */,
 				8D9BBC371EE2200900194E9A /* Assets.xcassets */,
 				8DD9ACD91F7B166900C2DD24 /* pizza-monster.png */,
 				8D9BBC391EE2200900194E9A /* LaunchScreen.storyboard */,
 				8D9BBC3C1EE2200900194E9A /* Info.plist */,
 			);
-			name = FriendlyEats;
 			path = FriendlyEats;
 			sourceTree = "<group>";
 		};
@@ -118,7 +155,6 @@
 				8D9BBC451EE2200900194E9A /* FriendlyEatsTests.swift */,
 				8D9BBC471EE2200900194E9A /* Info.plist */,
 			);
-			name = FriendlyEatsTests;
 			path = FriendlyEatsTests;
 			sourceTree = "<group>";
 		};
@@ -129,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D9BBC4A1EE2200900194E9A /* Build configuration list for PBXNativeTarget "FriendlyEats" */;
 			buildPhases = (
+				5240CADB19190D9CE38D8678 /* [CP] Check Pods Manifest.lock */,
 				8D9BBC291EE2200900194E9A /* Sources */,
 				8D9BBC2A1EE2200900194E9A /* Frameworks */,
 				8D9BBC2B1EE2200900194E9A /* Resources */,
+				D2A2426D0460DE0EBDED7CCA /* [CP] Embed Pods Frameworks */,
+				1F7FEFF5A6D08752A20F57B1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,9 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D9BBC4D1EE2200900194E9A /* Build configuration list for PBXNativeTarget "FriendlyEatsTests" */;
 			buildPhases = (
+				681D0F84BF7A66DB8590043F /* [CP] Check Pods Manifest.lock */,
 				8D9BBC3D1EE2200900194E9A /* Sources */,
 				8D9BBC3E1EE2200900194E9A /* Frameworks */,
 				8D9BBC3F1EE2200900194E9A /* Resources */,
+				326ACAD9FBEA7BC1BEB20551 /* [CP] Embed Pods Frameworks */,
+				9141CB1F6C01AC489D9E50FB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -172,6 +214,7 @@
 				TargetAttributes = {
 					8D9BBC2C1EE2200900194E9A = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 524Y6MYWEG;
 						ProvisioningStyle = Automatic;
 					};
 					8D9BBC401EE2200900194E9A = {
@@ -210,6 +253,7 @@
 				8D9BBC381EE2200900194E9A /* Assets.xcassets in Resources */,
 				8D9BBC361EE2200900194E9A /* Main.storyboard in Resources */,
 				8DD9ACDA1F7B166900C2DD24 /* pizza-monster.png in Resources */,
+				DABFECD41FCD8EA300CB2F6C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +266,135 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F7FEFF5A6D08752A20F57B1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FriendlyEats/Pods-FriendlyEats-resources.sh",
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseGoogleAuthUI.bundle,
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FriendlyEats/Pods-FriendlyEats-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		326ACAD9FBEA7BC1BEB20551 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FriendlyEatsTests/Pods-FriendlyEatsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5240CADB19190D9CE38D8678 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FriendlyEats-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		681D0F84BF7A66DB8590043F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FriendlyEatsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9141CB1F6C01AC489D9E50FB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FriendlyEatsTests/Pods-FriendlyEatsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2A2426D0460DE0EBDED7CCA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FriendlyEats/Pods-FriendlyEats-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FriendlyEats/Pods-FriendlyEats-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8D9BBC291EE2200900194E9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -230,6 +403,7 @@
 				8D9BBC331EE2200900194E9A /* RestaurantsTableViewController.swift in Sources */,
 				8D9BBC311EE2200900194E9A /* AppDelegate.swift in Sources */,
 				8DF1E3151EE72C4600192CDE /* LocalCollection.swift in Sources */,
+				DABFECD61FCDA5A900CB2F6C /* NewResterauntViewController.swift in Sources */,
 				8D5DF7021F7EF3BA00B0D24F /* NewReviewViewController.swift in Sources */,
 				8DF1E3131EE5CFF900192CDE /* Restaurant.swift in Sources */,
 				8DF77E1A1EEB45E500CB2330 /* RestaurantDetailViewController.swift in Sources */,
@@ -373,11 +547,13 @@
 		};
 		8D9BBC4B1EE2200900194E9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC1C1EE4D7AFD80EFD6CAF92 /* Pods-FriendlyEats.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 524Y6MYWEG;
 				INFOPLIST_FILE = FriendlyEats/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.firebase.FriendlyEats;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexLogan.FriendlyEats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -385,11 +561,13 @@
 		};
 		8D9BBC4C1EE2200900194E9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C2D4AD5CC04496C1F75CFB9 /* Pods-FriendlyEats.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 524Y6MYWEG;
 				INFOPLIST_FILE = FriendlyEats/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.firebase.FriendlyEats;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexLogan.FriendlyEats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -397,6 +575,7 @@
 		};
 		8D9BBC4E1EE2200900194E9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB5EF37176673232E6577FAA /* Pods-FriendlyEatsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -411,6 +590,7 @@
 		};
 		8D9BBC4F1EE2200900194E9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D48627A5F7A2ABC3463A8C0 /* Pods-FriendlyEatsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
