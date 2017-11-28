@@ -7,10 +7,10 @@ This is a simple project, wherein I aim to replicate custom functionality I have
 
 * Initial Firestore tutorial ( see below ) was used as a base.
 * An "Add Restaurant" View controller was added, so you can add custom Restaurants
+* Allows image uploads for Restauraunts, so you can add one if you wish.
 
 ### Whats Next
 
-* Adding custom image uploads, so that you can leave it as default if you wish, or upload an image yourself.
 * Adding accurate locations using google maps, so you could potentially ask for directions.
 
 
