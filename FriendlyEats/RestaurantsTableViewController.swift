@@ -19,6 +19,7 @@ import FirebaseAuthUI
 import FirebaseGoogleAuthUI
 import FirebaseFirestore
 import SDWebImage
+import CoreData
 
 func priceString(from price: Int) -> String {
   let priceText: String
@@ -119,8 +120,39 @@ class RestaurantsTableViewController: UIViewController, UITableViewDataSource, U
     return FiltersViewController.fromStoryboard(delegate: self)
   }()
 
-  override func viewDidLoad() {
+    @IBOutlet var populateButton: UIBarButtonItem!
+    
+    override func viewDidLoad() {
+        // MY STUFF!
+        //1
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+        //2
+        let fetchRequest =
+            NSFetchRequest<NSManagedObject>(entityName: "Restauraunt")
+        
+        //3
+        do {
+            let restaurantsTwo = try managedContext.fetch(fetchRequest)
+            print("CORE DATA")
+            for rest in restaurantsTwo {
+                print(rest.value(forKey: "name"))
+            }
+            print("END OF CORE DATA")
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
     super.viewDidLoad()
+        
+    populateButton = nil;
+        
     backgroundView.image = UIImage(named: "pizza-monster")!
     backgroundView.contentMode = .scaleAspectFit
     backgroundView.alpha = 0.5

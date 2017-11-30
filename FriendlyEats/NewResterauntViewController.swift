@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Firebase
 import FirebaseStorage
+import CoreData
 
 class NewResterauntViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
@@ -94,6 +95,7 @@ class NewResterauntViewController: UIViewController, UIPickerViewDelegate, UIPic
     @IBAction func didTapDone(_ sender: UIBarButtonItem) {
         guard fieldsValid() else { return }
         let collection = Firestore.firestore().collection("restaurants")
+        // Do a core data too!
         let restaurant = Restaurant(
             name: nameTextField.text!,
             category: categoryTextField.text!,
@@ -105,7 +107,22 @@ class NewResterauntViewController: UIViewController, UIPickerViewDelegate, UIPic
         )
         
         collection.addDocument(data: restaurant.dictionary)
+        
+        //        navigationController?.popViewController(animated: true)
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Restauraunt", in: context)!
+        // 3
+        let restTwo = NSRestauraunt(entity: entity, insertInto: context)
+        restTwo.restaurant = restaurant
+        do {
+            try context.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        
+        
         navigationController?.popViewController(animated: true)
+
         
     }
     

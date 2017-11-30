@@ -15,8 +15,9 @@
 //
 
 import Foundation
-
+import CoreData
 struct Restaurant {
+
 
   var name: String
   var category: String // Could become an enum

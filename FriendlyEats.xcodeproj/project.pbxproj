@@ -23,8 +23,10 @@
 		8DF77E1A1EEB45E500CB2330 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF77E191EEB45E500CB2330 /* RestaurantDetailViewController.swift */; };
 		8DF77E1C1EEB645100CB2330 /* StarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF77E1B1EEB645100CB2330 /* StarsView.swift */; };
 		D38ABF0CE1CD1C38886633AE /* Pods_FriendlyEats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C00C5E5FEEAA35CF290044 /* Pods_FriendlyEats.framework */; };
+		DA3E50C71FCEBB0900E052FF /* MORestauraunt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3E50C61FCEBB0900E052FF /* MORestauraunt.swift */; };
 		DABFECD41FCD8EA300CB2F6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DABFECD31FCD8EA300CB2F6C /* GoogleService-Info.plist */; };
 		DABFECD61FCDA5A900CB2F6C /* NewResterauntViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABFECD51FCDA5A900CB2F6C /* NewResterauntViewController.swift */; };
+		DABFECD91FCEB1CE00CB2F6C /* FriendlyEats.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DABFECD71FCEB1CE00CB2F6C /* FriendlyEats.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +63,10 @@
 		8DF77E191EEB45E500CB2330 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		8DF77E1B1EEB645100CB2330 /* StarsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsView.swift; sourceTree = "<group>"; };
 		BB5EF37176673232E6577FAA /* Pods-FriendlyEatsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendlyEatsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendlyEatsTests/Pods-FriendlyEatsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA3E50C61FCEBB0900E052FF /* MORestauraunt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MORestauraunt.swift; sourceTree = "<group>"; };
 		DABFECD31FCD8EA300CB2F6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DABFECD51FCDA5A900CB2F6C /* NewResterauntViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewResterauntViewController.swift; sourceTree = "<group>"; };
+		DABFECD81FCEB1CE00CB2F6C /* FriendlyEats.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FriendlyEats.xcdatamodel; sourceTree = "<group>"; };
 		FC1C1EE4D7AFD80EFD6CAF92 /* Pods-FriendlyEats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendlyEats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendlyEats/Pods-FriendlyEats.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +95,7 @@
 			children = (
 				21C00C5E5FEEAA35CF290044 /* Pods_FriendlyEats.framework */,
 				325899609D87164A15A40D6A /* Pods_FriendlyEatsTests.framework */,
+				DABFECD71FCEB1CE00CB2F6C /* FriendlyEats.xcdatamodeld */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 				DABFECD31FCD8EA300CB2F6C /* GoogleService-Info.plist */,
 				8D9BBC301EE2200900194E9A /* AppDelegate.swift */,
 				8D9BBC321EE2200900194E9A /* RestaurantsTableViewController.swift */,
+				DA3E50C61FCEBB0900E052FF /* MORestauraunt.swift */,
 				8DF77E191EEB45E500CB2330 /* RestaurantDetailViewController.swift */,
 				8D5DF7011F7EF3BA00B0D24F /* NewReviewViewController.swift */,
 				8D004D2C1EE879B5004DEF35 /* FiltersViewController.swift */,
@@ -409,6 +415,8 @@
 				8DF77E1A1EEB45E500CB2330 /* RestaurantDetailViewController.swift in Sources */,
 				8D004D2D1EE879B5004DEF35 /* FiltersViewController.swift in Sources */,
 				8DF77E1C1EEB645100CB2330 /* StarsView.swift in Sources */,
+				DABFECD91FCEB1CE00CB2F6C /* FriendlyEats.xcdatamodeld in Sources */,
+				DA3E50C71FCEBB0900E052FF /* MORestauraunt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +642,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DABFECD71FCEB1CE00CB2F6C /* FriendlyEats.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DABFECD81FCEB1CE00CB2F6C /* FriendlyEats.xcdatamodel */,
+			);
+			currentVersion = DABFECD81FCEB1CE00CB2F6C /* FriendlyEats.xcdatamodel */;
+			path = FriendlyEats.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8D9BBC251EE2200800194E9A /* Project object */;
 }
